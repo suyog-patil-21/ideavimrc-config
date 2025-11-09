@@ -1,0 +1,77 @@
+" copy all the content inside ~/.ideavimrc
+let mapleader = " "
+
+" for copying content to clipboard
+nmap <leader>y "+y
+vmap <leader>y "+y
+nmap <leader>Y "+Y
+
+" -------- Move Selected Lines (similar to vscode Alt+Arrow) --------
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
+
+" -------- Keep cursor centered when scrolling --------
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
+" jumping between angle brackets
+set matchpairs+=<:>
+
+" highlight search
+set hlsearch
+
+" remove highlight search
+nnoremap <Esc> :nohlsearch<cr>
+
+" case insensitive search
+" set ignorecase
+
+" enable case-sensitive search with uppercase letter is present
+" set smartcase
+
+" search while typing
+set incsearch
+
+" Goto file
+map <leader>pf <Action>(GotoFile)
+map <C-a>s <Action>(GotoSymbol)
+
+" file usage
+map <leader>ug <Action>(FindUsages)
+map <leader>gr <Action>(ShowUsages)
+
+map <leader>im <Action>(QuickImplementations)
+map <leader>td <Action>(QuickTypeDefinition)
+map <leader>ti <Action>(ExpressionTypeInfo)
+map <leader>oo <Action>(FileStructurePopup)
+
+" finding in one file
+" map <S-f> <Action>(Find)
+
+" Replace in a file
+" map <S-r> <Action>(Replace)
+
+" finding in multiple files
+map <leader>ps <Action>(FindInPath)
+" Replace in multiple file
+map <leader>pr <Action>(ReplaceInPath)
+
+" rename element
+map <leader>rn <Action>(RenameElement)
+
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+map <leader>ca <Action>(ShowIntentionActions)
+
+map <leader>sw <Action>(SurroundWith)
+
+map <S-space> <Action>(Generate)
+
+" error next and previous
+map [d <Action>(GotoNextError)
+map ]d <Action>(GotoPreviousError)
+
+" format file
+map <leader>f <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>ra <Action>(RearrangeCode)
