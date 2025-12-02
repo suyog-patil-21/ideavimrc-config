@@ -84,3 +84,6 @@ map <leader>ra <Action>(RearrangeCode)
 
 " show error of shown
 nmap <leader>e <Action>(ShowErrorDescription)
+
+" show file structure
+map <leader>s <Action>(FileStructurePopup)
